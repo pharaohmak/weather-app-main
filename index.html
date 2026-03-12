@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App | Frontend Mentor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="logo-container">
+      <img src="./assets/images/logo.svg" alt="Logo">
+    </div>
+    <div class="conversion-toggle">
+      <label for="units">Units:</label>
+      <select id="units">
+        <option value="metric">Metric (°C, km/h)</option>
+        <option value="imperial">Imperial (°F, mph)</option>
+      </select>
+    </div>
+  </nav>
+
+  <header>
+    <h1>How's the sky looking today?</h1>
+    <form class="search-container" id="search-form">
+      <input type="text" placeholder="Search for a city..." id="city-search" required>
+      <button type="submit" id="search-button">Search</button>
+    </form>
+  </header>
+
+  <main class="dashboard">
+    <section class="main-weather">
+      <div class="hero-card">
+        <img src="./assets/images/bg-today-large.svg" alt="" class="hero-bg">
+        <div class="hero-overlay">
+          <div class="location-box">
+            <h2 id="current-city">Berlin, Germany</h2>
+            <p id="current-date">--</p>
+          </div>
+          <div class="temp-box">
+            <img src="./assets/images/icon-sunny.webp" alt="Weather Icon" id="main-icon">
+            <p class="main-temp"><span id="temp-value">--</span>°</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p>Feels Like</p>
+          <div class="stat-value" id="feels-like">--°</div>
+        </div>
+        <div class="stat-card">
+          <p>Humidity</p>
+          <div class="stat-value" id="humidity">--%</div>
+        </div>
+        <div class="stat-card">
+          <p>Wind</p>
+          <div class="stat-value" id="wind">--</div>
+        </div>
+        <div class="stat-card">
+          <p>Precipitation</p>
+          <div class="stat-value" id="precip">--</div>
+        </div>
+      </div>
+
+      <section class="forecast-section">
+        <h2>7-Day Forecast</h2>
+        <div class="daily-forecast" id="daily-list"></div>
+      </section>
+    </section>
+
+    <aside class="hourly-sidebar">
+      <h2>Hourly Forecast</h2>
+      <div class="hourly-list" id="hourly-list"></div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

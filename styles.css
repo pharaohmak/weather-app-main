@@ -1,0 +1,136 @@
+:root {
+    --bg: #0b0e29;
+    --card: #1e213a;
+    --accent: #3c47e9;
+    --text: #ffffff;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#units {
+    background: var(--card);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: var(--card);
+    color: white;
+    width: 250px;
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hero-bg { width: 100%; display: block; }
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+}
+
+.main-temp { font-size: 4rem; font-weight: bold; margin: 0; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.stat-value { font-size: 1.5rem; font-weight: bold; }
+
+.daily-forecast {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.daily-card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.hourly-sidebar {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.hourly-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 850px) {
+    .dashboard { grid-template-columns: 1fr; }
+}
